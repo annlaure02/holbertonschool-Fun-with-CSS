@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+  color: #981f06;
+  cursor: pointer;
+  display: inline-block;
+}
+
+a::after {
+	content: '';
+  display: block;
+  height: 3px;
+	background-color: #981f06;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: .5s;
+}
+a:hover::after {
+	transform: scaleX(1);
+}
