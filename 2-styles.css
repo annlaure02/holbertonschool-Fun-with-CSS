@@ -1,0 +1,72 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.toggle {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+input {
+  display: none;
+}
+
+.toggle-label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-inner {
+  position: absolute;
+  width: 140px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #f1efef;
+  border: 2px solid #c0bdbd;
+  top: 5px;
+}
+
+.toggle-switch {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #c0bdbd;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+}
+
+input:checked + .toggle-label .toggle-inner {
+  background-color: #dc1439;
+}
+
+input:checked + .toggle-label .toggle-inner::after {
+  content: "Yes";
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  z-index: 1;
+}
+
+input + .toggle-label .toggle-inner::after {
+  content: "No";
+  color: #a49d9d;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  left: 65px;
+  z-index: 1;
+  opacity: .8;
+}
+
+input:checked + .toggle-label .toggle-switch {
+  left: 90px;
+}
+
+input:not(:checked) + .toggle-label .toggle-switch {
+  left: -5px;
+}
