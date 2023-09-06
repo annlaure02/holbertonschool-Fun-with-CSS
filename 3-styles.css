@@ -84,7 +84,7 @@ input:checked ~ .menu-open-button .menu-line-3 {
 
 input:checked ~ .menu-open-button .menu-line-1,
 input:checked ~ .menu-open-button .menu-line-2 {
-  margin-bottom: -2px;
+  margin-bottom: -2.5px;
 }
 
 
